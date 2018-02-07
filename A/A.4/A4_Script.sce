@@ -1,6 +1,14 @@
 Jup1=readpbm("Jupiter1.pbm")
 Jup2=readpbm("Jupiter2.pbm")
 //On utilise une boucle FOR pour prendre l'ensemble de l'image sauf un pixel sur chaque bord (A cause de la selection du Filtre median qui créerait une erreur)
+for x=1:860
+    for y=1:460
+       if Jup1(x,y)==255 & Jup2(x,y)<>255 then
+           Jup1(x,y)=Jup2(x,y)
+       end
+    end
+end
+
 for x=2:859
     for y=2:459
         //On selection chaque valeur autour de notre pixel et notre pixel

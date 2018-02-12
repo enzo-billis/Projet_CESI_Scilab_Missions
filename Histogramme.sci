@@ -1,7 +1,7 @@
-function graphique=Histogramme(image, nom_histogramme)
+function graph=Histogramme(image, nom_histogramme)
     
     //Création de la base du graphique (nom et couleur de fond)
-    graphique=figure("figure_name",nom_histogramme,"backgroundcolor",[1,1,1])
+    graph=figure("figure_name", nom_histogramme, "backgroundcolor",[1,1,1])
     
     //Récupération taille de l'image
     [hauteur, largeur]=size(image)
